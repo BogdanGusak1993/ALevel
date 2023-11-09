@@ -7,6 +7,5 @@ namespace HW8.Entities
         public string Id;
         public string Name;
         public string Password;
-        public CandyType Type;
     }
 }

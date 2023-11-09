@@ -6,7 +6,7 @@ namespace HW8.Serivces
 {
     public class PresentService : IPresentService
     {
-       public Candy AddCandy(List<CandysEntity> candyList, string name)
+        public Candy AddCandy(List<CandysEntity> candyList, string name)
         {
             foreach (CandysEntity candyEntity in candyList)
             {

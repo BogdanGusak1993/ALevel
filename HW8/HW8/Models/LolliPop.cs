@@ -4,6 +4,6 @@ namespace HW8.Models
 {
     public class LolliPop : SugarCandy
     {
-        public LolipopsForms form;
+        public LolipopsForms Form;
     }
 }

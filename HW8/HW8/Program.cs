@@ -6,10 +6,12 @@ using HW8.Serivces.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
 var serviceCollection = new ServiceCollection()
-    .AddScoped<ICandyRepository, CandyRepository>()
+    .AddTransient<ICandyRepository, CandyRepository>()
     .AddTransient<IPresentService, PresentService>()
     .AddTransient<IUserRepository, UserRepository>()
-    .AddTransient<App>;
+    .AddTransient<ISortCandy, SortCandy>()
+    .AddTransient<App>();
+   
 
 var provider = serviceCollection.BuildServiceProvider();
 
