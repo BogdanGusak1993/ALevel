@@ -6,7 +6,7 @@ namespace HW8.Entities
 {
     public class SugarCandysEntity : CandysEntity
     {
-        internal List<LolipopsEntities> _lolipopList = new List<LolipopsEntities>();
+        public List<LolipopsEntities> LolipopList = new List<LolipopsEntities>();
         public SugarCandyType Stick;
         
         public SugarCandysEntity(CandysEntity candy) 

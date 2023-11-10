@@ -8,16 +8,23 @@ namespace HW8.Serivces
 {
     public class SortCandy : ISortCandy
     {
-        private readonly ICandyRepository _candysRepository;
+        public  ICandyRepository CandysRepository;
+        public List<CandysEntity> Candys;
 
         public SortCandy(ICandyRepository candysRepository)
         {
-            _candysRepository = candysRepository;
+            CandysRepository = candysRepository;
         }
-        public void SortCandys()
+        public List<CandysEntity> CraftedCandys()
         {
-            var candys = _candysRepository.CraftCandys();
-            _candysRepository.SortCandysRepo(candys);
+            Candys = CandysRepository.CraftCandys();
+            return Candys;
+        }
+
+        public CandyRepository SortCandys()
+        {
+            var cadysRepo = CandysRepository.SortCandysRepo(Candys);
+            return cadysRepo;
         }
     }
 }

@@ -5,7 +5,7 @@ namespace HW8.Entities
 {
     public class ChocolateCandysEntity : CandysEntity
     {
-        internal List<BlackChocolateEntity> _blackChocolateList = new List<BlackChocolateEntity>();
+        public List<BlackChocolateEntity> BlackChocolateList = new List<BlackChocolateEntity>();
         public ChocolateCandyType ChocolatType;
         public ChocolateCandysEntity(CandysEntity candy)
         {

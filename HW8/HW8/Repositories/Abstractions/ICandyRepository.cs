@@ -7,6 +7,6 @@ namespace HW8.Repositories.Abstractions
     {
         public List <CandysEntity> CraftCandys ();
 
-        public void SortCandysRepo(List<CandysEntity> list);
+        public CandyRepository SortCandysRepo(List<CandysEntity> list);
     }
 }

@@ -9,9 +9,9 @@ namespace HW8.Repositories
     public class CandyRepository : ICandyRepository
     {
 
-        private  List<CandysEntity> _candysList = new List<CandysEntity>();
-        private  List<SugarCandysEntity> _sugarList = new List<SugarCandysEntity>();
-        private  List<ChocolateCandysEntity> _chocolateList = new List<ChocolateCandysEntity>();
+        public  List<CandysEntity> CandysList = new List<CandysEntity>();
+        public List<SugarCandysEntity> SugarList = new List<SugarCandysEntity>();
+        public List<ChocolateCandysEntity> ChocolateList = new List<ChocolateCandysEntity>();
         public List<CandysEntity> CraftCandys()
         {
             int max = 100, min = 50;
@@ -34,12 +34,13 @@ namespace HW8.Repositories
 
                 list.Add(candys);
             }
-            _candysList = list;
-            return _candysList;
+            CandysList = list;
+            return CandysList;
         }
-        public void SortCandysRepo(List<CandysEntity> list)
+        public CandyRepository SortCandysRepo(List<CandysEntity> list)
         {
-            list = _candysList;
+            list = CandysList;
+            var candysRepo = new CandyRepository();
             
             foreach (CandysEntity candys in list)
             {
@@ -47,26 +48,27 @@ namespace HW8.Repositories
                 if (candys.Type == CandyType.Sugar)
                 {
                     var sugarCandy = new SugarCandysEntity(candys);
-                   _sugarList.Add(sugarCandy);
+                    candysRepo.SugarList.Add(sugarCandy);
 
                     if (sugarCandy.Stick == SugarCandyType.OnStick)
                     {
                         var lolipop = new LolipopsEntities(sugarCandy);
-                        sugarCandy._lolipopList.Add(lolipop);
+                        sugarCandy.LolipopList.Add(lolipop);
                     }
                 }
                 else
                 {
                     var chocolateCandy = new ChocolateCandysEntity(candys);
-                    _chocolateList.Add(chocolateCandy);
+                    candysRepo.ChocolateList.Add(chocolateCandy);
 
                     if (chocolateCandy.ChocolatType == ChocolateCandyType.Dark)
                     {
                         var darkChocolate = new BlackChocolateEntity(chocolateCandy);
-                        chocolateCandy._blackChocolateList.Add(darkChocolate);
+                        chocolateCandy.BlackChocolateList.Add(darkChocolate);
                     }
                 }
             }
+            return candysRepo;
         }
 
     }
