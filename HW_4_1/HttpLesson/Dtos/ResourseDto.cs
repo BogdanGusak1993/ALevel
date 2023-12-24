@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HttpLesson.Dtos
 {
-    public class ResourseDto
+    public sealed class ResourseDto
     {   public int Id { get; set; }
         public string Name { get; set; }
         public int Year { get; set; }

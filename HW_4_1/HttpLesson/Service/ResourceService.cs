@@ -9,7 +9,7 @@ using HttpLesson.Service.Abstraction;
 
 namespace HttpLesson.Service
 {
-    public class ResourceService : IResourceService
+    public sealed class ResourceService : IResourceService
     {
         private readonly IInternalHttpClientService _httpClientService;
         private readonly ILogger<ResourceService> _logger;

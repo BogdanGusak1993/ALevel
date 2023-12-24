@@ -19,7 +19,7 @@ using HttpLesson.Service.Abstraction;
 
 namespace HttpLesson.Service
 {
-    internal class RegistrationService : IRegistrationService
+    internal sealed class RegistrationService : IRegistrationService
     {
         private readonly IInternalHttpClientService _httpClientService;
         private readonly ILogger<RegistrationService> _logger;

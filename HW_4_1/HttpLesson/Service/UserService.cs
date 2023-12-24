@@ -11,7 +11,7 @@ using Microsoft.Extensions.Options;
 
 namespace ALevelSample.Services;
 
-public class UserService : IUserService
+public sealed class UserService : IUserService
 {
     private readonly IInternalHttpClientService _httpClientService;
     private readonly ILogger<UserService> _logger;

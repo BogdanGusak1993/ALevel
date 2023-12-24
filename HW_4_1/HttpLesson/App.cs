@@ -4,7 +4,7 @@ using HttpLesson.Service.Abstraction;
 
 namespace ALevelSample;
 
-public class App
+public sealed class App
 {
     private readonly IUserService _userService;
     private readonly IResourceService _resourceService;

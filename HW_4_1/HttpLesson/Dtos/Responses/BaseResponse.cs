@@ -1,6 +1,6 @@
 namespace ALevelSample.Dtos.Responses;
 
-public class BaseResponse<T>
+public sealed class BaseResponse<T>
     where T : class
 {
     public T Data { get; set; }

@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace ALevelSample.Dtos;
 
-public class UserDto
+public sealed class UserDto
 {
     public int Id { get; set; }
     public string Email { get; set; }

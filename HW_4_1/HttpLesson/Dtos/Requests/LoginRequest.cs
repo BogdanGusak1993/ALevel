@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HttpLesson.Dtos.Requests
 {
-    public class LoginRequest
+    public sealed class LoginRequest
     {
         public string Email {  get; set; }
         public string Password { get; set; }

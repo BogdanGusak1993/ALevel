@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace ALevelSample.Services;
 
-public class InternalHttpClientService : IInternalHttpClientService
+public sealed class InternalHttpClientService : IInternalHttpClientService
 {
     private readonly IHttpClientFactory _clientFactory;
 
