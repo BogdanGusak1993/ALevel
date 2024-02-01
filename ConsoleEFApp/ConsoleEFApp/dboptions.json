@@ -1,0 +1,8 @@
+﻿{
+    "Migration": {
+        "IsNeedMigration":  true
+    },
+  "ConnectionStrings": {
+    "DbConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Modul4Homework;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}
